@@ -44,6 +44,13 @@ function sortearAmigo() {
     const indice = Math.floor(Math.random() * listaDeAmigos.length);
     const elegido = listaDeAmigos[indice];
 
+    //Animacion de confeti al mostrar resultado
+    confetti({
+  particleCount: 150,
+  spread: 100,
+  origin: { y: 0.6 }
+});
+
     // Mostrar el resultado
     const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<li>🎉 El amigo secreto es: <strong>${elegido}</strong></li>`;
